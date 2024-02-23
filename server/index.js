@@ -47,6 +47,6 @@ app.post('/register', (req, res) => {
     }).catch((err) => {
         res.json({ message: err })
     })
-    res.send('Hello World')
+    // res.send('Hello World')
 
 })
