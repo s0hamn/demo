@@ -5,13 +5,13 @@ const User = require('./models/User');
 const app = express();
 app.use(express.json());
 
-// app.use(cors(
-//     {
-//         origin: ["https://demo-frontend-beryl-gamma.vercel.app"],
-//         methods: ["POST", "GET"],
-//         credentials: true
-//     }
-// ));
+app.use(cors(
+    {
+        origin: ["https://demo-frontend-beryl-gamma.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'https://demo-frontend-beryl-gamma.vercel.app');
