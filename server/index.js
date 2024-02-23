@@ -13,18 +13,12 @@ app.use(cors(
     }
 ));
 
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', '*'); // Allow any origin (for development, replace with the actual origin in production)
-//     res.header('Access-Control-Allow-Methods', 'POST'); // Allow POST requests
-//     res.header('Access-Control-Allow-Headers', 'Content-Type'); // Allow the Content-Type header
-
-//     // Handle preflight requests
-//     if (req.method === 'OPTIONS') {
-//         return res.status(200).end();
-//     }
-
-//     next();
-// });
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 
 // app.use(cors());
