@@ -6,7 +6,7 @@ export default function Signup() {
     const [name, setName] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/register', {
+        axios.post('https://demo-bice-nu.vercel.app/register', {
             name: name
         }).then((res) => {
             console.log(res)
