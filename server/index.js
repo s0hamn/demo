@@ -6,11 +6,11 @@ const app = express();
 app.use(express.json());
 
 app.use(cors(
-    {
-        origin: ["https://demo-frontend-beryl-gamma.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
+    // {
+    //     origin: ["https://demo-frontend-beryl-gamma.vercel.app"],
+    //     methods: ["POST", "GET"],
+    //     credentials: true
+    // }
 ));
 
 app.use((req, res, next) => {
