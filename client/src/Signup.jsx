@@ -7,6 +7,7 @@ export default function Signup() {
     axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log(name)
         axios.post('https://demo-bice-nu.vercel.app/register', {
             name: name
         }).then((res) => {
