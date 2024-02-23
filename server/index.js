@@ -5,11 +5,13 @@ const User = require('./models/User');
 const app = express();
 app.use(express.json());
 
-// app.use(cors(
-//     {
-//         origin: []
-//     }
-// ));
+app.use(cors(
+    {
+        origin: ["https://demo-frontend-beryl-gamma.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 mongoose.connect('mongodb+srv://sohamnaigaonkar:soham123@cluster0.8urvkfy.mongodb.net/demodb')
 
