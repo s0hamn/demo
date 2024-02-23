@@ -39,14 +39,14 @@ app.get('/', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-    console.log(req.body.name)
-    // User.create({
-    //     name: req.body.name
-    // }).then((user) => {
-    //     res.json(user)
-    // }).catch((err) => {
-    //     res.json({ message: err })
-    // })
-    res.send('Hello World')
+    // console.log(req.body.name)
+    User.create({
+        name: req.body.name
+    }).then((user) => {
+        res.json(user)
+    }).catch((err) => {
+        res.json({ message: err })
+    })
+    // res.send('Hello World')
 
 })
