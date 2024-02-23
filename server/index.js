@@ -39,6 +39,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
+    console.log(req.body.name)
     User.create({
         name: req.body.name
     }).then((user) => {
