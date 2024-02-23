@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useState } from 'react'
 export default function Signup() {
     const [name, setName] = useState('')
+    axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post('https://demo-bice-nu.vercel.app/register', {
