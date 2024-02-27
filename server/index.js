@@ -50,6 +50,7 @@ app.post('/register', (req, res) => {
         res.json(user)
     }).catch((err) => {
         console.log(err)
+        console.log('ERROR')
         res.json({ message: err })
     })
     // res.send('Hello World')
