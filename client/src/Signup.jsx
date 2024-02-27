@@ -12,6 +12,7 @@ export default function Signup() {
             withCredentials: false,
             name: name
         }).then((res) => {
+            console.log("HERRE")
             console.log(res)
         }).catch((err) => {
             console.log(err)
