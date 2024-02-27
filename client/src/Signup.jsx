@@ -4,12 +4,12 @@ import axios from 'axios'
 import { useState } from 'react'
 export default function Signup() {
     const [name, setName] = useState('')
-    axios.defaults.withCredentials = true;
+    // axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(name)
         axios.post('https://demo-bice-nu.vercel.app/register/', {
-            withCredentials: true,
+            withCredentials: false,
             name: name
         }).then((res) => {
             console.log(res)
