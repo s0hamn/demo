@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.use(cors(
     {
-        origin: ["https://demo-frontend-beryl-gamma.vercel.app"],
+        origin: ["https://demo-frontend-beryl-gamma.vercel.app/"],
         methods: ["POST", "GET"],
         credentials: true
     }
