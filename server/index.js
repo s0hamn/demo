@@ -31,7 +31,7 @@ app.use(function (req, res, next) {
 
 
 // app.use(cors());
-mongoose.connect('mongodb+srv://sohamnaigaonkar:soham123@cluster0.8urvkfy.mongodb.net/demodb?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://sohamnaigaonkar:soham123@cluster0.8urvkfy.mongodb.net/demodb?retryWrites=true&w=majority', { useNewUrlParser: true })
 
 app.listen(3001, () => {
     console.log('Server is running on port 3001');
